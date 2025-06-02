@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - SNOW LOGIN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .space {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        .login-container {
+            background: rgba(15, 15, 30, 0.75);
+            padding: 50px 40px;
+            border-radius: 20px;
+            width: 420px;
+            max-width: 90%;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.6), 0 0 25px rgba(0, 191, 255, 0.4);
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 30px;
+            background: linear-gradient(90deg, #00FFFF, #8A2BE2, #4169E1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow-text 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow-text {
+            0% { text-shadow: 0 0 10px #8A2BE2; }
+            100% { text-shadow: 0 0 20px #00FFFF; }
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #ddd;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #00FFFF;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(45deg, #00FFFF, #8A2BE2);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #8A2BE2, #00FFFF);
+            transform: scale(1.03);
+        }
+
+        .links {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #00FFFF;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .links a:hover {
+            color: #8A2BE2;
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer a {
+            color: #8A2BE2;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            animation: shoot linear;
+            opacity: 0;
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(1000px) translateY(-300px);
+                opacity: 0;
+            }
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation: float infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="space" id="space"></div>
+
+    <div class="login-container">
+        <h1>SNOW LOGIN</h1>
+        <form>
+            <div class="input-group">
+                <label for="username">اسم المستخدم</label>
+                <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+            </div>
+            <div class="input-group">
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+            </div>
+            <button type="submit">تسجيل الدخول</button>
+            <div class="links">
+                <a href="#">نسيت كلمة المرور؟</a>
+                <a href="#">إنشاء حساب</a>
+            </div>
+            <div class="footer">
+                تصميم بواسطة <a href="https://github.com/S8-q1" target="_blank">@S8_q1</a> | جميع الحقوق محفوظة © عبود
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const space = document.getElementById('space');
+        const spaceWidth = window.innerWidth;
+        const spaceHeight = window.innerHeight;
+
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = `${Math.random() * 3}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * spaceWidth}px`;
+            star.style.top = `${Math.random() * spaceHeight}px`;
+            star.style.opacity = Math.random();
+            star.style.setProperty('--duration', `${5 + Math.random() * 10}s`);
+            space.appendChild(star);
+        }
+
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+            shootingStar.style.left = `${Math.random() * spaceWidth}px`;
+            shootingStar.style.top = `${Math.random() * spaceHeight}px`;
+            shootingStar.style.width = `${2 + Math.random() * 3}px`;
+            shootingStar.style.height = shootingStar.style.width;
+            shootingStar.style.animationDuration = `${2 + Math.random() * 3}s`;
+            space.appendChild(shootingStar);
+            setTimeout(() => shootingStar.remove(), 3000);
+        }
+
+        function createPlanet() {
+            const planet = document.createElement('div');
+            planet.className = 'planet';
+            const size = 40 + Math.random() * 80;
+            planet.style.width = `${size}px`;
+            planet.style.height = `${size}px`;
+            planet.style.left = `${Math.random() * spaceWidth}px`;
+            planet.style.top = `${Math.random() * spaceHeight}px`;
+            planet.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 80%, 60%) 0%, hsl(${Math.random() * 360}, 80%, 30%) 100%)`;
+            planet.style.animationDuration = `${8 + Math.random() * 15}s`;
+            planet.style.boxShadow = `0 0 ${size/2}px rgba(255, 255, 255, 0.3)`;
+            space.appendChild(planet);
+        }
+
+        for (let i = 0; i < 4; i++) {
+            createPlanet();
+        }
+
+        setInterval(createShootingStar, 2000);
+    </script>
+</body>
+</html>
