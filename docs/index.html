@@ -2,28 +2,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عبود | المطور الأسطوري 🔥</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عبود | المطور الناري</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --main: #ff0055;
+      --main: #ff0066;
       --accent: #00ffe5;
       --bg: #0e0022;
       --text: #ffffff;
     }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background: var(--bg);
-      position: relative;
       overflow-x: hidden;
+      position: relative;
     }
-
     video.bg-video {
       position: fixed;
       right: 0;
@@ -32,112 +31,116 @@
       min-height: 100%;
       z-index: -2;
       object-fit: cover;
-      filter: brightness(0.2) blur(2px);
+      filter: brightness(0.2) blur(1px);
     }
-
     .overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
-
     header {
       text-align: center;
-      padding: 60px 20px 30px;
-      background: rgba(0,0,0,0.5);
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
       box-shadow: 0 0 40px var(--main);
     }
-
-    header img {
-      width: 160px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px var(--accent);
-      margin-bottom: 20px;
-    }
-
     header h1 {
-      font-size: 2.7rem;
+      font-size: 3rem;
       color: var(--accent);
-      text-shadow: 0 0 20px var(--accent);
+      text-shadow: 0 0 15px var(--accent);
     }
-
     nav {
-      background: rgba(0,0,0,0.3);
-      padding: 15px;
       text-align: center;
-      box-shadow: inset 0 -2px 4px var(--main);
+      background: rgba(0,0,0,0.5);
+      padding: 15px;
     }
-
     nav a {
-      color: var(--text);
+      color: white;
       margin: 0 15px;
-      font-weight: bold;
       text-decoration: none;
-      font-size: 1.2rem;
-      transition: 0.3s;
+      font-weight: bold;
     }
-
-    nav a:hover {
-      color: var(--main);
-    }
-
     section {
       padding: 60px 25px;
       max-width: 1200px;
       margin: auto;
     }
-
     .title {
-      font-size: 2.3rem;
       text-align: center;
-      margin-bottom: 40px;
+      font-size: 2.2rem;
       color: var(--accent);
       text-shadow: 0 0 10px var(--accent);
+      margin-bottom: 40px;
     }
-
     .card {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.04);
       padding: 20px;
-      margin: 20px 0;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      box-shadow: 0 0 30px var(--main);
-      transform: translateY(-5px);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 8px;
-      background: var(--main);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      box-shadow: 0 0 10px var(--main);
+      margin: 20px 0;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
       transition: 0.3s ease;
     }
-
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px var(--main);
+    }
+    .btn {
+      background: var(--main);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 10px var(--main);
+      transition: 0.3s;
+    }
     .btn:hover {
       background: #ff3388;
       box-shadow: 0 0 20px #ff3388;
     }
-
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      margin: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+      transition: 0.3s ease-in-out;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px var(--accent);
+    }
+    .login-box {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 25px var(--main);
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      color: white;
+    }
     footer {
       text-align: center;
       padding: 40px;
-      background: rgba(0,0,0,0.5);
-      margin-top: 50px;
+      background: rgba(0, 0, 0, 0.5);
       color: var(--accent);
-      border-top: 2px solid var(--main);
       font-size: 1rem;
     }
   </style>
@@ -145,71 +148,120 @@
 <body>
 
 <video autoplay muted loop class="bg-video">
-  <source src="https://cdn.coverr.co/videos/coverr-stars-at-night-6652/1080p.mp4" type="video/mp4">
+  <source src="https://cdn.coverr.co/videos/coverr-nebula-stars-0506/1080p.mp4" type="video/mp4">
 </video>
 <div class="overlay"></div>
 
 <header>
-  <img src="file-Rce4XJKifMPW1LADFhm5Qv" alt="Sonic Logo">
-  <h1>عبود المطور | أسطورة الكود</h1>
+  <h1>🌀 عبود المطور | أسطورة الأكواد 🧠</h1>
 </header>
 
 <nav>
   <a href="#about">تعريف</a>
   <a href="#skills">مهارات</a>
-  <a href="#lovers">الناس الي يحبهم</a>
-  <a href="#links">قنواتي</a>
-  <a href="#contact">تواصل</a>
+  <a href="#gallery">معرض</a>
+  <a href="#friends">أصدقاء</a>
+  <a href="#channels">قنواتي</a>
+  <a href="#login">دخول</a>
 </nav>
 
 <section id="about">
   <div class="title">من هو عبود؟</div>
   <div class="card">
-    عبود هو أسطورة التطوير العربي. خبير في Java وC++ وتعديل التطبيقات باحترافية عالية، ومحب للتقنيات المتقدمة والهندسة العكسية.
+    مطور متميز في عالم Android والأنظمة، محترف Java / Kotlin / C++، يتميز بابتكار أدوات خرافية وتحليل التطبيقات بطريقة فريدة.
   </div>
 </section>
 
 <section id="skills">
-  <div class="title">مهارات عبود</div>
-  <div class="card">💻 تطوير Android باستخدام Java / Kotlin</div>
-  <div class="card">⚙️ أدوات C++ فائقة السرعة</div>
-  <div class="card">🧠 تحليل التطبيقات وهندسة عكسية متقدمة</div>
-  <div class="card">🎮 تعديل الألعاب والتطبيقات بأمان</div>
+  <div class="title">مهارات أسطورية</div>
+  <div class="card">🔧 تطوير Android بتقنيات حديثة</div>
+  <div class="card">🔐 حماية وتحليل التطبيقات</div>
+  <div class="card">⚙️ برمجة أدوات بـ C++</div>
+  <div class="card">🎮 تعديل تطبيقات وألعاب</div>
 </section>
 
-<section id="lovers">
-  <div class="title">الناس الي يحبهم عبود 💖</div>
-  <div class="card">
-    🧑‍💻 <strong>أحمد</strong><br>
-    <a href="https://t.me/AhmedUn5" class="btn" target="_blank">تيليجرام أحمد</a>
-  </div>
-  <div class="card">
-    🧑‍💻 <strong>حسين</strong><br>
-    <a href="https://t.me/oozz_3" class="btn" target="_blank">تيليجرام حسين</a>
+<section id="gallery">
+  <div class="title">📸 معرض أعمال عبود</div>
+  <div class="gallery">
+    <img src="https://source.unsplash.com/featured/?cyber" alt="عمل 1">
+    <img src="https://source.unsplash.com/featured/?technology" alt="عمل 2">
+    <img src="https://source.unsplash.com/featured/?coding" alt="عمل 3">
   </div>
 </section>
 
-<section id="links">
-  <div class="title">قنوات عبود الرسمية</div>
+<section id="friends">
+  <div class="title">👥 الناس اللي يحبهم عبود</div>
+  <div class="card">🧑‍💻 أحمد - <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
+  <div class="card">🧑‍💻 حسين - <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
+</section>
+
+<section id="channels">
+  <div class="title">🔗 روابط قنوات عبود</div>
   <div style="text-align:center;">
-    <a href="https://t.me/S8_ip" class="btn" target="_blank">📌 قناة التعريف</a>
-    <a href="https://t.me/S8_q1" class="btn" target="_blank">👤 حساب عبود</a>
-    <a href="https://t.me/wpdvm" class="btn" target="_blank">📣 القناة الأساسية</a>
-    <a href="https://t.me/SSlXT" class="btn" target="_blank">🛡️ القناة الاحتياطية</a>
+    <a class="btn" href="https://t.me/S8_ip" target="_blank">📌 قناة التعريف</a>
+    <a class="btn" href="https://t.me/S8_q1" target="_blank">👤 حساب عبود</a>
+    <a class="btn" href="https://t.me/wpdvm" target="_blank">📣 القناة الأساسية</a>
+    <a class="btn" href="https://t.me/SSlXT" target="_blank">🛡️ القناة الاحتياطية</a>
   </div>
 </section>
 
-<section id="contact">
-  <div class="title">تواصل مباشر</div>
-  <div class="card" style="text-align:center;">
-    عندك مشروع؟ فكرة؟ أو تحتاج شي؟<br><br>
-    <a href="https://t.me/S8_q1" class="btn">راسل عبود الآن 💬</a>
+<section id="login">
+  <div class="title">🔐 تسجيل دخول</div>
+  <div class="login-box">
+    <input type="text" placeholder="اسم المستخدم">
+    <input type="password" placeholder="كلمة المرور">
+    <a class="btn" href="#">دخول</a>
   </div>
 </section>
 
 <footer>
-  جميع الحقوق محفوظة © 2025 - عبود المطور | تصميم ناري 🔥 @S8_q1
+  جميع الحقوق محفوظة © 2025 | عبود المطور | @S8_q1 🔥
 </footer>
+
+
+<section id="achievements">
+  <div class="title">🏆 إنجازات عبود</div>
+  <div class="card">🔹 أكثر من 300 تطبيق معدل بنجاح</div>
+  <div class="card">🔹 حماية مخصصة لأكثر من 120 مشروع</div>
+  <div class="card">🔹 ساهم في مجتمعات برمجية عالمية</div>
+</section>
+
+<section id="testimonials">
+  <div class="title">💬 آراء المستخدمين</div>
+  <div class="card">"عبود غير نظرتي للتعديل البرمجي" — 🧑‍💼 مصطفى</div>
+  <div class="card">"واجهة قوية وأمان عالي" — 👩‍💻 نسرين</div>
+  <div class="card">"أفضل دعم فني حصلت عليه" — 🧑‍🔧 عبد الله</div>
+</section>
+
+<button onclick="toggleTheme()" style="
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: var(--main);
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 0 10px var(--main);
+  cursor: pointer;
+  z-index: 999;
+">🌓 الوضع الليلي</button>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+<style>
+.dark-mode {
+  --main: #00bfff;
+  --accent: #ffaa00;
+  --bg: #000000;
+  background: #000 !important;
+}
+</style>
 
 </body>
 </html>
