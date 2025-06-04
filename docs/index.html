@@ -2,34 +2,54 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>لوحه عبود-سونيك</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عبود | المطور الأسطوري 🔥</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --main: #ff0066;
-      --accent: #00f0ff;
-      --bg: #0c011a;
+      --main: #ff0055;
+      --accent: #00ffe5;
+      --bg: #0e0022;
       --text: #ffffff;
     }
 
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: radial-gradient(circle at top, #1b0037, #000000 100%);
       color: var(--text);
-      overflow-x: hidden;
+      background: var(--bg);
       position: relative;
+      overflow-x: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+      filter: brightness(0.2) blur(2px);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+      z-index: -1;
     }
 
     header {
       text-align: center;
       padding: 60px 20px 30px;
-      background: linear-gradient(135deg, #1f0037, #0a0018);
+      background: rgba(0,0,0,0.5);
       box-shadow: 0 0 40px var(--main);
-      position: relative;
     }
 
     header img {
@@ -80,7 +100,7 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
       padding: 20px;
       margin: 20px 0;
       border-radius: 15px;
@@ -111,33 +131,10 @@
       box-shadow: 0 0 20px #ff3388;
     }
 
-    .stars {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      animation: twinkle 4s infinite ease-in-out alternate;
-    }
-
-    @keyframes twinkle {
-      0% { opacity: 0.2; transform: scale(1); }
-      100% { opacity: 1; transform: scale(1.6); }
-    }
-
     footer {
       text-align: center;
       padding: 40px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       margin-top: 50px;
       color: var(--accent);
       border-top: 2px solid var(--main);
@@ -147,60 +144,71 @@
 </head>
 <body>
 
-<div class="stars">
-  <div class="star" style="top:0%; left:0%;"></div><div class="star" style="top:5%; left:37%;"></div><div class="star" style="top:10%; left:74%;"></div><div class="star" style="top:15%; left:11%;"></div><div class="star" style="top:20%; left:48%;"></div><div class="star" style="top:25%; left:85%;"></div><div class="star" style="top:30%; left:22%;"></div><div class="star" style="top:35%; left:59%;"></div><div class="star" style="top:40%; left:96%;"></div><div class="star" style="top:45%; left:33%;"></div><div class="star" style="top:50%; left:70%;"></div><div class="star" style="top:55%; left:7%;"></div><div class="star" style="top:60%; left:44%;"></div><div class="star" style="top:65%; left:81%;"></div><div class="star" style="top:70%; left:18%;"></div><div class="star" style="top:75%; left:55%;"></div><div class="star" style="top:80%; left:92%;"></div><div class="star" style="top:85%; left:29%;"></div><div class="star" style="top:90%; left:66%;"></div><div class="star" style="top:95%; left:3%;"></div><div class="star" style="top:100%; left:40%;"></div><div class="star" style="top:105%; left:77%;"></div><div class="star" style="top:110%; left:14%;"></div><div class="star" style="top:115%; left:51%;"></div><div class="star" style="top:120%; left:88%;"></div><div class="star" style="top:125%; left:25%;"></div><div class="star" style="top:130%; left:62%;"></div><div class="star" style="top:135%; left:99%;"></div><div class="star" style="top:140%; left:36%;"></div><div class="star" style="top:145%; left:73%;"></div><div class="star" style="top:150%; left:10%;"></div><div class="star" style="top:155%; left:47%;"></div><div class="star" style="top:160%; left:84%;"></div><div class="star" style="top:165%; left:21%;"></div><div class="star" style="top:170%; left:58%;"></div><div class="star" style="top:175%; left:95%;"></div><div class="star" style="top:180%; left:32%;"></div><div class="star" style="top:185%; left:69%;"></div><div class="star" style="top:190%; left:6%;"></div><div class="star" style="top:195%; left:43%;"></div><div class="star" style="top:200%; left:80%;"></div><div class="star" style="top:205%; left:17%;"></div><div class="star" style="top:210%; left:54%;"></div><div class="star" style="top:215%; left:91%;"></div><div class="star" style="top:220%; left:28%;"></div><div class="star" style="top:225%; left:65%;"></div><div class="star" style="top:230%; left:2%;"></div><div class="star" style="top:235%; left:39%;"></div><div class="star" style="top:240%; left:76%;"></div><div class="star" style="top:245%; left:13%;"></div>
-</div>
+<video autoplay muted loop class="bg-video">
+  <source src="https://cdn.coverr.co/videos/coverr-stars-at-night-6652/1080p.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
 <header>
   <img src="file-Rce4XJKifMPW1LADFhm5Qv" alt="Sonic Logo">
-  <h1>عبود المطور | أسطورة التطوير</h1>
+  <h1>عبود المطور | أسطورة الكود</h1>
 </header>
 
 <nav>
   <a href="#about">تعريف</a>
   <a href="#skills">مهارات</a>
   <a href="#lovers">الناس الي يحبهم</a>
+  <a href="#links">قنواتي</a>
   <a href="#contact">تواصل</a>
 </nav>
 
 <section id="about">
   <div class="title">من هو عبود؟</div>
   <div class="card">
-    عبود هو شخصية بارزة في عالم التعديل والتطوير. محترف في لغات البرمجة وخاصة Java و C++، متخصص في حماية الأنظمة وتحليل التطبيقات وصناعة أدوات مخصصة متطورة.
+    عبود هو أسطورة التطوير العربي. خبير في Java وC++ وتعديل التطبيقات باحترافية عالية، ومحب للتقنيات المتقدمة والهندسة العكسية.
   </div>
 </section>
 
 <section id="skills">
   <div class="title">مهارات عبود</div>
-  <div class="card">🔧 تطوير تطبيقات Android باستخدام Java / Kotlin</div>
-  <div class="card">🧠 التعديل على الألعاب والتطبيقات بشكل احترافي</div>
-  <div class="card">🛡️ حماية التطبيقات والتشفير والتحليل الهندسي</div>
-  <div class="card">⚙️ استخدام C++ في بناء أدوات قوية</div>
+  <div class="card">💻 تطوير Android باستخدام Java / Kotlin</div>
+  <div class="card">⚙️ أدوات C++ فائقة السرعة</div>
+  <div class="card">🧠 تحليل التطبيقات وهندسة عكسية متقدمة</div>
+  <div class="card">🎮 تعديل الألعاب والتطبيقات بأمان</div>
 </section>
 
 <section id="lovers">
   <div class="title">الناس الي يحبهم عبود 💖</div>
   <div class="card">
-    <strong>🧑‍💻 أحمد</strong><br>
-    <a href="https://t.me/AhmedUn5" class="btn" target="_blank">تابعه على تيليجرام</a>
+    🧑‍💻 <strong>أحمد</strong><br>
+    <a href="https://t.me/AhmedUn5" class="btn" target="_blank">تيليجرام أحمد</a>
   </div>
   <div class="card">
-    <strong>🧑‍💻 حسين</strong><br>
-    <a href="https://t.me/oozz_3" class="btn" target="_blank">تابعه على تيليجرام</a>
+    🧑‍💻 <strong>حسين</strong><br>
+    <a href="https://t.me/oozz_3" class="btn" target="_blank">تيليجرام حسين</a>
+  </div>
+</section>
+
+<section id="links">
+  <div class="title">قنوات عبود الرسمية</div>
+  <div style="text-align:center;">
+    <a href="https://t.me/S8_ip" class="btn" target="_blank">📌 قناة التعريف</a>
+    <a href="https://t.me/S8_q1" class="btn" target="_blank">👤 حساب عبود</a>
+    <a href="https://t.me/wpdvm" class="btn" target="_blank">📣 القناة الأساسية</a>
+    <a href="https://t.me/SSlXT" class="btn" target="_blank">🛡️ القناة الاحتياطية</a>
   </div>
 </section>
 
 <section id="contact">
-  <div class="title">تواصل مع عبود</div>
+  <div class="title">تواصل مباشر</div>
   <div class="card" style="text-align:center;">
-    راسل عبود مباشرة على تيليجرام:
-    <br><br>
-    <a href="https://t.me/S8_q1" class="btn">💬 راسلني الآن</a>
+    عندك مشروع؟ فكرة؟ أو تحتاج شي؟<br><br>
+    <a href="https://t.me/S8_q1" class="btn">راسل عبود الآن 💬</a>
   </div>
 </section>
 
 <footer>
-  جميع الحقوق محفوظة © 2025 - تصميم عبود الأسطوري | @S8_q1
+  جميع الحقوق محفوظة © 2025 - عبود المطور | تصميم ناري 🔥 @S8_q1
 </footer>
 
 </body>
