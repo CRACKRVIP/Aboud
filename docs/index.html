@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عبود | المطور الناري</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>عبود | المطور الناري</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
     :root {
       --main: #ff0066;
       --accent: #00ffe5;
@@ -144,59 +145,70 @@
       font-size: 1rem;
     }
   </style>
-</head>
+<style>
+  .btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background: #ff0066;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 10px #ff0066;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background: #ff3388;
+    box-shadow: 0 0 15px #ff3388;
+  }
+  .title {
+    font-size: 2.5rem;
+    color: #00ffe5;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #00ffe5;
+  }
+  .card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px auto;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+  }
+</style></head>
 <body>
-
-<video autoplay muted loop class="bg-video">
-  <source src="https://cdn.coverr.co/videos/coverr-nebula-stars-0506/1080p.mp4" type="video/mp4">
+<video autoplay="" class="bg-video" loop="" muted="">
+<source src="https://cdn.coverr.co/videos/coverr-nebula-stars-0506/1080p.mp4" type="video/mp4"/>
 </video>
 <div class="overlay"></div>
-
 <header>
-  <h1>🌀 عبود المطور | أسطورة الأكواد 🧠</h1>
+<h1>🌀 عبود المطور | أسطورة الأكواد 🧠</h1>
 </header>
 
-
-<nav>
-  <a href="#" onclick="showPage('home')">🏠 الرئيسية</a>
-  <a href="#" onclick="showPage('pricing')">💰 الأسعار</a>
-  <a href="#" onclick="showPage('features')">⚙️ مميزات</a>
-  <a href="#" onclick="showPage('channels')">📡 القنوات</a>
-  <a href="#" onclick="showPage('friends')">👥 الأصدقاء</a>
+<nav style="text-align:center; background:#111; padding:15px;">
+<a class="btn" href="#" onclick="showPage('home')">🏠 الرئيسية</a>
+<a class="btn" href="#" onclick="showPage('pricing')">💰 الأسعار</a>
+<a class="btn" href="#" onclick="showPage('channels')">📡 القنوات</a>
+<a class="btn" href="#" onclick="showPage('friends')">👥 الأصدقاء</a>
 </nav>
 
+<div class="title">👥 الناس اللي يحبهم عبود</div>
+<div class="card">🧑‍💻 أحمد - <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
+<div class="card">🧑‍💻 حسين - <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
 
 
 
 
-
-
-
-
-
-
-
-
-  <div class="title">👥 الناس اللي يحبهم عبود</div>
-  <div class="card">🧑‍💻 أحمد - <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
-  <div class="card">🧑‍💻 حسين - <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
-</section>
-
-
-
-<!--
+&lt;!--
   
-</section>
+&lt;/section&gt;
 
 <footer>
   جميع الحقوق محفوظة © 2025 | عبود المطور | @S8_q1 🔥
 </footer>
-
-
-
-
-
-
 <button onclick="toggleTheme()" style="
   position: fixed;
   top: 15px;
@@ -211,13 +223,11 @@
   cursor: pointer;
   z-index: 999;
 ">🌓 الوضع الليلي</button>
-
 <script>
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
 }
 </script>
-
 <style>
 .dark-mode {
   --main: #00bfff;
@@ -226,22 +236,6 @@ function toggleTheme() {
   background: #000 !important;
 }
 </style>
-
-
-<div style="position:fixed; top:20px; left:20px; z-index:999;">
-  <button class="btn" style="background:#ff0066;" onclick="switchTheme('#ff0066', '#00ffe5')">❤️ وردي</button>
-  <button class="btn" style="background:#00bfff;" onclick="switchTheme('#00bfff', '#ffaa00')">💙 أزرق</button>
-  <button class="btn" style="background:#28a745;" onclick="switchTheme('#28a745', '#ffffff')">💚 أخضر</button>
-</div>
-
-<script>
-function switchTheme(main, accent) {
-  document.documentElement.style.setProperty('--main', main);
-  document.documentElement.style.setProperty('--accent', accent);
-}
-</script>
-
-
 <style>
   .rain, .stars {
     position: fixed;
@@ -288,59 +282,41 @@ function switchTheme(main, accent) {
 <div class="rain">
   {"".join([f'<div class="rain-drop" style="left:{i*2}%; animation-delay:{i*0.1}s;"></div>' for i in range(50)])}
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 function showPage(id) {
   document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
   document.getElementById(id).style.display = 'block';
 }
 </script>
-
-
-<section id="home" class="page-section">
-  <h2 class="title">🛡️ متجر سونيك | أقوى لودر</h2>
-  <div class="card">🔐 لودر أمان عالي وحماية أونلاين متقدمة</div>
-  <div class="card">🎨 تصميم خرافي مختلف ومميز</div>
-  <div class="card">🔑 مفتاح خاص وفريد حسب اشتراك المستخدم</div>
-  <div class="card">🧠 كشف ذكي مطور بأسلوب أسطوري</div>
-  <div class="card">📱 منظور iPad واقعي وسلس</div>
-  <div class="card">🎯 تصغير مؤشر احترافي</div>
-  <div class="card">💥 بولت تراك ذكي وآمن</div>
-  <div class="card">🔥 أقوى لودر خرافي من سونيك على الإطلاق</div>
+<section class="page-section" id="home" style="">
+<h2 class="title">🛡️ متجر سونيك | أقوى لودر</h2>
+<div class="card">🔐 لودر أمان عالي وحماية أونلاين متقدمة</div>
+<div class="card">🎨 تصميم خرافي مختلف ومميز</div>
+<div class="card">🔑 مفتاح خاص وفريد حسب اشتراك المستخدم</div>
+<div class="card">🧠 كشف ذكي مطور بأسلوب أسطوري</div>
+<div class="card">📱 منظور iPad واقعي وسلس</div>
+<div class="card">🎯 تصغير مؤشر احترافي</div>
+<div class="card">💥 بولت تراك ذكي وآمن</div>
+<div class="card">🔥 أقوى لودر خرافي من سونيك على الإطلاق</div>
 </section>
-
-<section id="pricing" class="page-section" style="display:none;">
-  <h2 class="title">💰 أسعار مفاتيح سونيك</h2>
-  <div class="card">🔓 لودر عادي — 60 يوم بـ 10 اسيا</div>
-  <div class="card">🔓 لودر برو — 60 يوم بـ 15 اسيا</div>
+<section class="page-section" id="pricing" style="display:none;">
+<h2 class="title">💰 أسعار مفاتيح سونيك</h2>
+<div class="card">🔓 لودر عادي — 60 يوم بـ 10 اسيا</div>
+<div class="card">🔓 لودر برو — 60 يوم بـ 15 اسيا</div>
 </section>
-
-<section id="channels" class="page-section" style="display:none;">
-  <h2 class="title">📡 قنوات عبود الرسمية</h2>
-  <div class="card">
-    <a class="btn" href="https://t.me/S8_ip" target="_blank">📌 قناة التعريف</a>
-    <a class="btn" href="https://t.me/S8_q1" target="_blank">👤 حساب عبود</a>
-    <a class="btn" href="https://t.me/wpdvm" target="_blank">📣 القناة الأساسية</a>
-    <a class="btn" href="https://t.me/SSlXT" target="_blank">🛡️ القناة الاحتياطية</a>
-  </div>
+<section class="page-section" id="channels" style="display:none;">
+<h2 class="title">📡 قنوات عبود الرسمية</h2>
+<div class="card">
+<a class="btn" href="https://t.me/S8_ip" target="_blank">📌 قناة التعريف</a>
+<a class="btn" href="https://t.me/S8_q1" target="_blank">👤 حساب عبود</a>
+<a class="btn" href="https://t.me/wpdvm" target="_blank">📣 القناة الأساسية</a>
+<a class="btn" href="https://t.me/SSlXT" target="_blank">🛡️ القناة الاحتياطية</a>
+</div>
 </section>
-
-<section id="friends" class="page-section" style="display:none;">
-  <h2 class="title">👥 أصدقاء عبود</h2>
-  <div class="card">🧑‍💻 أحمد – <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
-  <div class="card">🧑‍💻 حسين – <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
+<section class="page-section" id="friends" style="display:none;">
+<h2 class="title">👥 أصدقاء عبود</h2>
+<div class="card">🧑‍💻 أحمد – <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
+<div class="card">🧑‍💻 حسين – <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
 </section>
-
 </body>
 </html>
