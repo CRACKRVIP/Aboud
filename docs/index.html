@@ -4,123 +4,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أسطورة عبود المطور | SONIC</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>لوحة عبود المطور</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --main-color: #ff0055;
+      --accent-color: #00e0ff;
+      --bg-color: #0f0c29;
+      --gradient-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      --text-color: #fff;
+    }
+
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
+      background: var(--gradient-bg);
+      color: var(--text-color);
       overflow-x: hidden;
-      animation: bgShift 20s infinite alternate;
     }
-    @keyframes bgShift {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
+
     header {
-      padding: 30px;
+      background: rgba(0,0,0,0.6);
       text-align: center;
-      background: rgba(0,0,0,0.5);
+      padding: 50px 20px 30px;
+      box-shadow: 0 0 25px var(--main-color);
+    }
+
+    header img {
+      width: 150px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 15px var(--accent-color));
+    }
+
+    header h1 {
       font-size: 2.8rem;
-      text-shadow: 0 0 25px #ff00cc;
-      border-bottom: 4px solid #ff0055;
+      color: var(--accent-color);
+      text-shadow: 0 0 10px var(--accent-color);
     }
-    .logo {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+
+    nav {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
     }
-    .logo img {
-      max-width: 220px;
-      border-radius: 20px;
-      box-shadow: 0 0 35px rgba(255, 0, 255, 0.4);
-      transition: transform 0.5s ease;
+
+    nav a {
+      color: var(--text-color);
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
     }
-    .logo img:hover {
-      transform: scale(1.05) rotate(-2deg);
+
+    nav a:hover {
+      color: var(--main-color);
     }
+
     section {
-      padding: 50px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    .section-title {
+
+    .title {
       text-align: center;
-      font-size: 2.3rem;
-      color: #00e0ff;
-      margin-bottom: 30px;
-      text-shadow: 0 0 15px #00e0ff;
+      font-size: 2.2rem;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px var(--accent-color);
     }
+
     .card {
       background: rgba(255, 255, 255, 0.05);
-      margin: 15px 0;
       padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 0 25px rgba(255,0,255,0.1);
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
       transition: 0.3s ease-in-out;
     }
+
     .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 0 30px rgba(255,0,255,0.4);
+      box-shadow: 0 0 25px var(--accent-color);
     }
+
     .btn {
       display: inline-block;
-      background: #ff00cc;
-      color: #fff;
       padding: 12px 30px;
+      background: var(--main-color);
+      color: white;
       border-radius: 30px;
+      margin: 10px;
       text-decoration: none;
       font-weight: bold;
-      margin: 10px;
+      box-shadow: 0 0 15px var(--main-color);
       transition: 0.3s;
-      box-shadow: 0 0 10px #ff00cc;
     }
+
     .btn:hover {
-      background: #ff33cc;
-      box-shadow: 0 0 20px #ff33cc;
+      background: #ff3388;
+      box-shadow: 0 0 20px #ff3388;
     }
+
     footer {
+      background: rgba(0,0,0,0.6);
       text-align: center;
       padding: 30px;
-      background: rgba(0, 0, 0, 0.4);
-      border-top: 2px solid #ff00cc;
       margin-top: 60px;
       font-size: 1rem;
-    }
-    .glow {
-      color: #ff00cc;
-      text-shadow: 0 0 15px #ff00cc;
+      border-top: 2px solid var(--main-color);
     }
   </style>
 </head>
 <body>
 
-<header>🌟 واجهة عبود الأسطورية | SONIC 🔥</header>
-
-<div class="logo">
+<header>
   <img src="file-Rce4XJKifMPW1LADFhm5Qv" alt="Sonic Logo">
-</div>
+  <h1>لوحة عبود الرسمية | المطور الأسطوري</h1>
+</header>
 
-<section>
-  <h2 class="section-title">من هو عبود؟</h2>
+<nav>
+  <a href="#about">من هو عبود؟</a>
+  <a href="#skills">المهارات</a>
+  <a href="#links">روابط مهمة</a>
+  <a href="#contact">تواصل</a>
+</nav>
+
+<section id="about">
+  <div class="title">نبذة عن عبود</div>
   <div class="card">
-    عبود مطور خبير ومهندس تقني في مجال الجافا والتعديل على التطبيقات. يتميز بأسلوب فريد وإبداعي في التطوير والهندسة العكسية.
+    عبود هو مطور عربي محترف في مجال تعديل التطبيقات، حماية الأنظمة، وهندسة التطبيقات. يشتهر بإبداعه في مجال البرمجة وابتكار حلول تقنية بأسلوب عصري وقوي.
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">المهارات والتقنيات</h2>
-  <div class="card">🛠️ تطوير Android باحترافية باستخدام Java / Kotlin</div>
-  <div class="card">🧠 تعديل وتحسين التطبيقات بذكاء عالي</div>
-  <div class="card">⚙️ برمجة C++ للأداء العالي</div>
-  <div class="card">🔐 خبرة في الحماية والتشفير والتحليل</div>
+<section id="skills">
+  <div class="title">الاختصاصات والخبرة</div>
+  <div class="card">💻 تطوير تطبيقات Android باستخدام Java وKotlin</div>
+  <div class="card">⚙️ برمجة C++ لمهام الأداء العالي والأمان</div>
+  <div class="card">🧠 هندسة عكسية وتحليل برمجي متقدم</div>
+  <div class="card">🎯 تخصيص التطبيقات وتعديل الألعاب والأنظمة</div>
 </section>
 
-<section>
-  <h2 class="section-title">تواصل مع عبود</h2>
+<section id="links">
+  <div class="title">قنوات عبود وروابطه</div>
   <div style="text-align:center;">
     <a href="https://t.me/S8_ip" class="btn" target="_blank">📌 قناة التعريف</a>
     <a href="https://t.me/S8_q1" class="btn" target="_blank">👤 حساب عبود</a>
@@ -129,11 +155,12 @@
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">🔥 العب مع الأسطورة 🔥</h2>
+<section id="contact">
+  <div class="title">تواصل معي مباشرة</div>
   <div class="card" style="text-align:center;">
-    <p class="glow">الآن أنت ضمن عالم عبود — احتراف، تطوير، وأكواد نارية!</p>
-    <a href="https://t.me/S8_q1" class="btn">💬 راسل عبود الآن</a>
+    هل لديك مشروع أو فكرة؟ راسلني على التيليجرام الآن.
+    <br><br>
+    <a href="https://t.me/S8_q1" class="btn">💬 راسل عبود</a>
   </div>
 </section>
 
