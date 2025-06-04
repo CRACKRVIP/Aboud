@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>عبود | المطور الناري</title>
+<title>عبود | المطور</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <style>
@@ -178,6 +178,30 @@
     text-align: center;
     box-shadow: 0 0 15px rgba(0,255,255,0.1);
   }
+</style><style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .card:hover {
+    transform: scale(1.03) rotate(-1deg);
+    transition: 0.3s ease;
+  }
+  .btn:active {
+    transform: scale(0.95);
+  }
+  .to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #00ffe5;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #00ffe5;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 999;
+  }
 </style></head>
 <body>
 <video autoplay="" class="bg-video" loop="" muted="">
@@ -185,16 +209,14 @@
 </video>
 <div class="overlay"></div>
 <header>
-<h1>🌀 عبود المطور | أسطورة الأكواد 🧠</h1>
+<h1>🌀 عبود المطور | أسطورة </h1>
 </header>
-
 <nav style="text-align:center; background:#111; padding:15px;">
 <a class="btn" href="#" onclick="showPage('home')">🏠 الرئيسية</a>
 <a class="btn" href="#" onclick="showPage('pricing')">💰 الأسعار</a>
 <a class="btn" href="#" onclick="showPage('channels')">📡 القنوات</a>
 <a class="btn" href="#" onclick="showPage('friends')">👥 الأصدقاء</a>
 </nav>
-
 <div class="title">👥 الناس اللي يحبهم عبود</div>
 <div class="card">🧑‍💻 أحمد - <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
 <div class="card">🧑‍💻 حسين - <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
@@ -207,7 +229,7 @@
 &lt;/section&gt;
 
 <footer>
-  جميع الحقوق محفوظة © 2025 | عبود المطور | @S8_q1 🔥
+ © 2025 | عبود المطور | @S8_q1 👑
 </footer>
 <button onclick="toggleTheme()" style="
   position: fixed;
@@ -288,21 +310,31 @@ function showPage(id) {
   document.getElementById(id).style.display = 'block';
 }
 </script>
-<section class="page-section" id="home" style="">
-<h2 class="title">🛡️ متجر سونيك | أقوى لودر</h2>
-<div class="card">🔐 لودر أمان عالي وحماية أونلاين متقدمة</div>
-<div class="card">🎨 تصميم خرافي مختلف ومميز</div>
-<div class="card">🔑 مفتاح خاص وفريد حسب اشتراك المستخدم</div>
-<div class="card">🧠 كشف ذكي مطور بأسلوب أسطوري</div>
-<div class="card">📱 منظور iPad واقعي وسلس</div>
-<div class="card">🎯 تصغير مؤشر احترافي</div>
+
+
+
+
+
+<section class="page-section" id="home">
+<h2 class="title">⚙️ مميزات لودر سونيك</h2>
+<div class="card">🔐 حماية أونلاين متقدمة</div>
+<div class="card">🎨 تصميم خرافي</div>
+<div class="card">🔑 مفتاح اشتراك خاص</div>
+<div class="card">📱 منظور iPad</div>
+<div class="card">🎯 مؤشر احترافي</div>
+<div class="card">🧠 كشف ذكي مطور</div>
 <div class="card">💥 بولت تراك ذكي وآمن</div>
-<div class="card">🔥 أقوى لودر خرافي من سونيك على الإطلاق</div>
+<div class="card">🔥 أقوى لودر من سونيك</div>
 </section>
 <section class="page-section" id="pricing" style="display:none;">
 <h2 class="title">💰 أسعار مفاتيح سونيك</h2>
 <div class="card">🔓 لودر عادي — 60 يوم بـ 10 اسيا</div>
 <div class="card">🔓 لودر برو — 60 يوم بـ 15 اسيا</div>
+</section>
+<section class="page-section" id="friends" style="display:none;">
+<h2 class="title">👥 الناس الي يحبهم عبود</h2>
+<div class="card">🧑‍💻 أحمد – <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
+<div class="card">🧑‍💻 حسين – <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
 </section>
 <section class="page-section" id="channels" style="display:none;">
 <h2 class="title">📡 قنوات عبود الرسمية</h2>
@@ -313,10 +345,5 @@ function showPage(id) {
 <a class="btn" href="https://t.me/SSlXT" target="_blank">🛡️ القناة الاحتياطية</a>
 </div>
 </section>
-<section class="page-section" id="friends" style="display:none;">
-<h2 class="title">👥 أصدقاء عبود</h2>
-<div class="card">🧑‍💻 أحمد – <a class="btn" href="https://t.me/AhmedUn5" target="_blank">تيليجرام</a></div>
-<div class="card">🧑‍💻 حسين – <a class="btn" href="https://t.me/oozz_3" target="_blank">تيليجرام</a></div>
-</section>
-</body>
+<a class="to-top" href="#home">⬆️ للأعلى</a></body>
 </html>
